@@ -35,8 +35,8 @@ const AboutHero = () => {
       ></div>
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 reveal">About Elevate Engineering</h1>
-        <p className="text-xl text-slate-200 max-w-3xl mx-auto reveal reveal-delay-1">
-          Discover our story, our values, and our commitment to excellence in elevator engineering and installation.
+        <p className="text-xl text-slate-400 max-w-3xl mx-auto reveal reveal-delay-1">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis.
         </p>
       </div>
     </section>

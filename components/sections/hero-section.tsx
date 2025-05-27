@@ -44,7 +44,7 @@ const HeroSection = () => {
         <p className="text-xl text-slate-200 max-w-3xl mx-auto mb-8 reveal reveal-delay-1">{t("hero.subtitle")}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 reveal reveal-delay-2">
           <Button asChild size="lg" className="min-w-[160px]">
-            <Link href="/contact">{t("cta.getQuote")}</Link>
+            <Link href="/contact">Get a Quote</Link>
           </Button>
           <Button
             asChild

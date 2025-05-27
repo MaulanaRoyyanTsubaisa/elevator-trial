@@ -97,7 +97,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-primary">
-              Elevate<span className="text-accent">Engineering</span>
+              QQ<span className="text-accent">Elevator</span>
             </span>
           </Link>
 
@@ -154,7 +154,7 @@ const Header = () => {
             <LanguageSwitcher />
 
             <Button asChild>
-              <Link href="/contact">{t("nav.getQuote")}</Link>
+              <Link href="/contact">Get a Quote</Link>
             </Button>
           </nav>
 
@@ -258,7 +258,7 @@ const Header = () => {
 
             <Button asChild className="mt-4 w-fit">
               <Link href="/contact" onClick={closeMenu}>
-                {t("nav.getQuote")}
+                Get a Quote
               </Link>
             </Button>
           </nav>

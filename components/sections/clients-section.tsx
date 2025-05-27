@@ -36,7 +36,7 @@ const ClientsSection = () => {
     <section className="py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("clients.title")}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal"> {t("clients.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
             {t("clients.subtitle")}
           </p>

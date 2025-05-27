@@ -5,8 +5,10 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "@/contexts/language-context"
 
 const ClientShowcase = () => {
+  const{ t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
 
@@ -17,7 +19,7 @@ const ClientShowcase = () => {
       logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=300&auto=format&fit=crop",
       image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1200&auto=format&fit=crop",
       testimonial:
-        "Elevate Engineering delivered exceptional quality and service for our 50-story office tower. Their passenger elevators have been running flawlessly since installation.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolorem quaerat veritatis voluptatum quasi molestias.",
       person: "Michael Johnson",
       title: "Facilities Director",
     },
@@ -27,7 +29,7 @@ const ClientShowcase = () => {
       logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=300&auto=format&fit=crop",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop",
       testimonial:
-        "The panoramic elevators installed by Elevate Engineering have become a signature feature of our hotel, providing guests with stunning views while ensuring smooth and reliable operation.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente ex deleniti minus porro laudantium impedit odio repellendus deserunt quia? ",
       person: "Sarah Williams",
       title: "General Manager",
     },
@@ -37,7 +39,7 @@ const ClientShowcase = () => {
       logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=300&auto=format&fit=crop",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
       testimonial:
-        "Our luxury condominium residents are extremely satisfied with the custom home lifts. The attention to detail and premium finishes align perfectly with our high-end residential standards.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente ex deleniti minus porro laudantium impedit odio repellendus deserunt quia?.",
       person: "David Chen",
       title: "Property Developer",
     },
@@ -47,7 +49,7 @@ const ClientShowcase = () => {
       logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=300&auto=format&fit=crop",
       image: "https://images.unsplash.com/photo-1504439468489-c8920d796a29?q=80&w=1200&auto=format&fit=crop",
       testimonial:
-        "The medical-grade elevators provided by Elevate Engineering have significantly improved our hospital's efficiency. Their reliability is crucial for our 24/7 operations.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente ex deleniti minus porro laudantium impedit odio repellendus deserunt quia?.",
       person: "Dr. Emily Rodriguez",
       title: "Hospital Administrator",
     },
@@ -57,7 +59,7 @@ const ClientShowcase = () => {
       logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=300&auto=format&fit=crop",
       image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop",
       testimonial:
-        "The dumbwaiter system has revolutionized our kitchen operations. Food service is now seamless between floors, improving both efficiency and customer satisfaction.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente ex deleniti minus porro laudantium impedit odio repellendus deserunt quia?.",
       person: "Thomas Laurent",
       title: "Executive Chef",
     },
@@ -113,9 +115,9 @@ const ClientShowcase = () => {
     <section className="py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Our Valued Clients</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">  {t("clientShowcase.title")} </h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            Discover what our clients have to say about their experience working with Elevate Engineering.
+            {t("clientShowcase.subtitle")}
           </p>
         </div>
 

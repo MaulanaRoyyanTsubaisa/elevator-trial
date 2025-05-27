@@ -30,38 +30,38 @@ const translations = {
     "hero.exploreProducts": "Explore Products",
 
     // Intro Section
-    "intro.title": "Crafting Vertical Transportation Excellence Since 1995",
+    "intro.title": "lorem ipsum dolor sit amet consectetur Since 1995",
     "intro.description":
-      "At Elevate Engineering, we specialize in designing, manufacturing, and installing premium elevator systems for residential and commercial buildings. Our commitment to quality, safety, and innovation has made us a trusted partner for architects, developers, and property owners worldwide.",
-    "intro.feature1": "Premium quality materials and craftsmanship",
-    "intro.feature2": "Energy-efficient elevator solutions",
-    "intro.feature3": "Customized designs to match your architecture",
-    "intro.feature4": "Comprehensive maintenance and support",
-    "intro.feature5": "Industry-leading safety standards",
-    "intro.learnMore": "Learn More About Us",
+      "Lorem, lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui.",
+    "intro.feature1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.learnMore": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 
     // Features Section
     "features.title": "Why Choose Elevate Engineering",
     "features.subtitle":
-      "Our commitment to excellence and customer satisfaction sets us apart in the elevator industry.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui.",
     "features.safety.title": "Safety First",
     "features.safety.desc":
-      "Our elevators exceed industry safety standards with multiple backup systems and fail-safe mechanisms.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati debitis natus soluta autem esse non ipsam velit mollitia, aperiam quibusdam." ,
     "features.delivery.title": "Timely Delivery",
     "features.delivery.desc":
-      "We pride ourselves on meeting project deadlines with precision planning and efficient execution.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui.",
     "features.custom.title": "Custom Solutions",
     "features.custom.desc":
-      "Each elevator is tailored to your specific requirements, architectural style, and building constraints.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui..",
     "features.quality.title": "Premium Quality",
     "features.quality.desc":
-      "We use only the highest quality materials and components to ensure longevity and reliability.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui.",
     "features.energy.title": "Energy Efficient",
     "features.energy.desc":
-      "Our elevator systems are designed to minimize energy consumption without compromising performance.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui..",
     "features.support.title": "Lifetime Support",
     "features.support.desc":
-      "We provide comprehensive maintenance and support services throughout the lifecycle of your elevator.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui..",
 
     // Product Showcase
     "productShowcase.title": "Featured Products",
@@ -79,7 +79,7 @@ const translations = {
     "productShowcase.hospital.desc": "Specialized elevators for healthcare facilities",
 
     // Client Showcase
-    "clientShowcase.title": "Our Valued Clients",
+    "clientShowcase.title": "our valued clients",
     "clientShowcase.subtitle":
       "Discover what our clients have to say about their experience working with Elevate Engineering.",
 
@@ -88,6 +88,8 @@ const translations = {
     "clients.subtitle":
       "We've partnered with renowned architects, developers, and property managers to deliver exceptional elevator solutions.",
     "clients.viewProjects": "View Our Projects",
+
+  
 
     // CTA Section
     "cta.title": "Ready to Elevate Your Building Experience?",
@@ -293,38 +295,38 @@ const translations = {
     "hero.exploreProducts": "Jelajahi Produk",
 
     // Intro Section
-    "intro.title": "Menciptakan Keunggulan Transportasi Vertikal Sejak 1995",
+    "intro.title": "lorem ipsum dolor sit amet Sejak 1995",
     "intro.description":
-      "Di Elevate Engineering, kami mengkhususkan diri dalam merancang, memproduksi, dan memasang sistem elevator premium untuk bangunan residensial dan komersial. Komitmen kami terhadap kualitas, keamanan, dan inovasi telah menjadikan kami mitra terpercaya bagi arsitek, pengembang, dan pemilik properti di seluruh dunia.",
-    "intro.feature1": "Material dan keahlian berkualitas premium",
-    "intro.feature2": "Solusi elevator hemat energi",
-    "intro.feature3": "Desain kustom sesuai arsitektur Anda",
-    "intro.feature4": "Pemeliharaan dan dukungan komprehensif",
-    "intro.feature5": "Standar keamanan terdepan di industri",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae deserunt corrupti exercitationem totam quis, quos rerum minus quod qui.",
+    "intro.feature1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+    "intro.feature2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "intro.feature5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     "intro.learnMore": "Pelajari Lebih Lanjut Tentang Kami",
 
     // Features Section
     "features.title": "Mengapa Memilih Elevate Engineering",
     "features.subtitle":
-      "Komitmen kami terhadap keunggulan dan kepuasan pelanggan membedakan kami di industri elevator.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam! ",
     "features.safety.title": "Keamanan Utama",
     "features.safety.desc":
-      "Elevator kami melampaui standar keamanan industri dengan sistem cadangan ganda dan mekanisme fail-safe.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam!",
     "features.delivery.title": "Pengiriman Tepat Waktu",
     "features.delivery.desc":
-      "Kami bangga memenuhi tenggat waktu proyek dengan perencanaan presisi dan eksekusi efisien.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam!.",
     "features.custom.title": "Solusi Kustom",
     "features.custom.desc":
-      "Setiap elevator disesuaikan dengan kebutuhan spesifik, gaya arsitektur, dan batasan bangunan Anda.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam!",
     "features.quality.title": "Kualitas Premium",
     "features.quality.desc":
-      "Kami hanya menggunakan material dan komponen berkualitas tertinggi untuk memastikan daya tahan dan keandalan.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam!",
     "features.energy.title": "Hemat Energi",
     "features.energy.desc":
-      "Sistem elevator kami dirancang untuk meminimalkan konsumsi energi tanpa mengorbankan performa.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam!",
     "features.support.title": "Dukungan Seumur Hidup",
     "features.support.desc":
-      "Kami menyediakan layanan pemeliharaan dan dukungan komprehensif sepanjang siklus hidup elevator Anda.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque provident enim magni deserunt exercitationem iure odit non et aperiam!",
 
     // Product Showcase
     "productShowcase.title": "Produk Unggulan",
@@ -344,7 +346,7 @@ const translations = {
     // Client Showcase
     "clientShowcase.title": "Klien Berharga Kami",
     "clientShowcase.subtitle":
-      "Temukan apa yang dikatakan klien kami tentang pengalaman mereka bekerja dengan Elevate Engineering.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, reiciendis. ",
 
     // Clients Section
     "clients.title": "Dipercaya oleh Pemimpin Industri",

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
-import { useLanguage } from "@/contexts/language-context"
+import { useLanguage } from "@/contexts/language-context";
 
 const Footer = () => {
   const { t } = useLanguage()
@@ -13,9 +13,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Elevate<span className="text-accent">Engineering</span>
+              QQ<span className="text-accent">Elevator</span>
             </h3>
-            <p className="text-slate-300 mb-4">{t("footer.description")}</p>
+            <p className="text-slate-300 mb-4">
+              Premium elevator solutions for residential and commercial buildings. Quality, safety, and innovation in
+              every project.
+            </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-white hover:text-accent transition-colors">
                 <Facebook size={20} />
@@ -124,7 +127,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

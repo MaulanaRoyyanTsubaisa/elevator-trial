@@ -10,7 +10,7 @@ import { LanguageProvider } from "@/contexts/language-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Elevate Engineering | Premium Elevator Solutions",
+  title: "QQ Elevator | Premium Elevator Solutions",
   description:
     "Professional elevator construction and installation services for residential and commercial buildings.",
   generator: "Royyan and Team",

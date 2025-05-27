@@ -17,13 +17,13 @@ const ProductShowcase = () => {
       id: 1,
       name: t("productShowcase.homeLift"),
       description: t("productShowcase.homeLift.desc"),
-      image: "https://images.unsplash.com/photo-1603198132637-5c4ceb5de31f?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
     },
     {
       id: 2,
       name: t("productShowcase.passenger"),
       description: t("productShowcase.passenger.desc"),
-      image: "https://images.unsplash.com/photo-1567610701070-6739001d5144?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1609942072337-c3370e820005?q=80&w=1200&auto=format&fit=crop",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const ProductShowcase = () => {
       id: 4,
       name: t("productShowcase.panoramic"),
       description: t("productShowcase.panoramic.desc"),
-      image: "https://images.unsplash.com/photo-1603198132334-9cef81c66c41?q=80&w=1200&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
     },
     {
       id: 5,

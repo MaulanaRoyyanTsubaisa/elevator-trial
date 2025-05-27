@@ -4,8 +4,11 @@ import { useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
 
 const ContactInfo = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,15 +32,15 @@ const ContactInfo = () => {
   return (
     <Card className="border-none shadow-lg reveal reveal-delay-2">
       <CardHeader>
-        <CardTitle className="text-2xl">Contact Information</CardTitle>
-        <CardDescription>Reach out to us through any of the following channels.</CardDescription>
+        <CardTitle className="text-2xl">{t("contact.info.title")}</CardTitle>
+        <CardDescription>{t("contact.info.subtitle")}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-start">
             <MapPin className="h-5 w-5 text-accent mr-3 mt-1" />
             <div>
-              <h4 className="font-medium">Address</h4>
+              <h4 className="font-medium">{t("contact.info.address")}</h4>
               <p className="text-slate-600 dark:text-slate-400">
                 123 Elevator Street, Engineering District
                 <br />
@@ -51,7 +54,7 @@ const ContactInfo = () => {
           <div className="flex items-start">
             <Phone className="h-5 w-5 text-accent mr-3 mt-1" />
             <div>
-              <h4 className="font-medium">Phone</h4>
+              <h4 className="font-medium">{t("contact.info.phone")}</h4>
               <p className="text-slate-600 dark:text-slate-400">
                 Main: +1 (555) 123-4567
                 <br />
@@ -63,7 +66,7 @@ const ContactInfo = () => {
           <div className="flex items-start">
             <Mail className="h-5 w-5 text-accent mr-3 mt-1" />
             <div>
-              <h4 className="font-medium">Email</h4>
+              <h4 className="font-medium">{t("contact.info.email")}</h4>
               <p className="text-slate-600 dark:text-slate-400">
                 General Inquiries: info@elevateengineering.com
                 <br />
@@ -75,7 +78,7 @@ const ContactInfo = () => {
           <div className="flex items-start">
             <Clock className="h-5 w-5 text-accent mr-3 mt-1" />
             <div>
-              <h4 className="font-medium">Business Hours</h4>
+              <h4 className="font-medium">{t("contact.info.hours")}</h4>
               <p className="text-slate-600 dark:text-slate-400">
                 Monday - Friday: 8:00 AM - 6:00 PM
                 <br />
@@ -88,7 +91,7 @@ const ContactInfo = () => {
         </div>
 
         <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
-          <h4 className="font-medium mb-3">Connect With Us</h4>
+          <h4 className="font-medium mb-3">{t("contact.info.connect")}</h4>
           <div className="flex space-x-4">
             <Link
               href="#"

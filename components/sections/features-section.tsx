@@ -3,8 +3,11 @@
 import { useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, Clock, Settings, Award, Zap, HeartHandshake } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const FeaturesSection = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,36 +31,33 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: <Shield className="h-10 w-10 text-accent" />,
-      title: "Safety First",
-      description:
-        "Our elevators exceed industry safety standards with multiple backup systems and fail-safe mechanisms.",
+      title: t("features.safety.title"),
+      description: t("features.safety.desc"),
     },
     {
       icon: <Clock className="h-10 w-10 text-accent" />,
-      title: "Timely Delivery",
-      description: "We pride ourselves on meeting project deadlines with precision planning and efficient execution.",
+      title: t("features.delivery.title"),
+      description: t("features.delivery.desc"),
     },
     {
       icon: <Settings className="h-10 w-10 text-accent" />,
-      title: "Custom Solutions",
-      description:
-        "Each elevator is tailored to your specific requirements, architectural style, and building constraints.",
+      title: t("features.custom.title"),
+      description: t("features.custom.desc"),
     },
     {
       icon: <Award className="h-10 w-10 text-accent" />,
-      title: "Premium Quality",
-      description: "We use only the highest quality materials and components to ensure longevity and reliability.",
+      title: t("features.quality.title"),
+      description: t("features.quality.desc"),
     },
     {
       icon: <Zap className="h-10 w-10 text-accent" />,
-      title: "Energy Efficient",
-      description: "Our elevator systems are designed to minimize energy consumption without compromising performance.",
+      title: t("features.energy.title"),
+      description: t("features.energy.desc"),
     },
     {
       icon: <HeartHandshake className="h-10 w-10 text-accent" />,
-      title: "Lifetime Support",
-      description:
-        "We provide comprehensive maintenance and support services throughout the lifecycle of your elevator.",
+      title: t("features.support.title"),
+      description: t("features.support.desc"),
     },
   ]
 
@@ -65,9 +65,9 @@ const FeaturesSection = () => {
     <section className="py-20 bg-slate-50 dark:bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Why Choose Elevate Engineering</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("features.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            Our commitment to excellence and customer satisfaction sets us apart in the elevator industry.
+            {t("features.subtitle")}
           </p>
         </div>
 

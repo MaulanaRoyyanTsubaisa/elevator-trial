@@ -2,8 +2,11 @@
 
 import { useEffect } from "react"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 const CompanyHistory = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -67,10 +70,9 @@ const CompanyHistory = () => {
     <section className="py-20 bg-slate-50 dark:bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Our History</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("history.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            From humble beginnings to industry leadership, our journey has been defined by innovation, quality, and a
-            commitment to excellence.
+            {t("history.subtitle")}
           </p>
         </div>
 
@@ -86,23 +88,14 @@ const CompanyHistory = () => {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <h3 className="text-2xl font-bold mb-4 reveal">A Legacy of Excellence</h3>
-            <p className="text-slate-700 dark:text-slate-300 mb-4 reveal reveal-delay-1">
-              For over 25 years, Elevate Engineering has been at the forefront of elevator innovation, transforming how
-              people move within buildings around the world. What began as a small team of passionate engineers has
-              grown into a global leader in elevator design, manufacturing, and installation.
-            </p>
-            <p className="text-slate-700 dark:text-slate-300 reveal reveal-delay-2">
-              Our journey has been marked by a relentless pursuit of excellence, a commitment to safety, and a drive to
-              push the boundaries of what's possible in vertical transportation. Today, we continue to build on this
-              legacy, combining time-tested engineering principles with cutting-edge technology to create elevator
-              solutions that stand the test of time.
-            </p>
+            <h3 className="text-2xl font-bold mb-4 reveal">{t("history.legacy")}</h3>
+            <p className="text-slate-700 dark:text-slate-300 mb-4 reveal reveal-delay-1">{t("history.description1")}</p>
+            <p className="text-slate-700 dark:text-slate-300 reveal reveal-delay-2">{t("history.description2")}</p>
           </div>
         </div>
 
         <div className="space-y-8">
-          <h3 className="text-2xl font-bold text-center mb-8 reveal">Key Milestones</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 reveal">{t("history.milestones")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {milestones.map((milestone, index) => (
               <div

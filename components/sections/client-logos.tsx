@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from "react"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 const ClientLogos = () => {
+  const { t } = useLanguage()
   const scrollRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -98,9 +100,9 @@ const ClientLogos = () => {
     <section className="py-20 bg-slate-50 dark:bg-slate-800 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Our Trusted Clients</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("clients.logos.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            We're proud to work with leading companies and organizations across various industries.
+            {t("clients.logos.subtitle")}
           </p>
         </div>
 

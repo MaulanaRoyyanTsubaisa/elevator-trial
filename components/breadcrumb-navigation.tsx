@@ -10,6 +10,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { useLanguage } from "@/contexts/language-context"
 
 interface BreadcrumbItemProps {
   label: string
@@ -23,11 +24,12 @@ interface BreadcrumbNavigationProps {
 
 export function BreadcrumbNavigation({ items, className }: BreadcrumbNavigationProps) {
   const pathname = usePathname()
+  const { t } = useLanguage()
 
   // Generate breadcrumb items automatically if not provided
   const generateBreadcrumbs = (): BreadcrumbItemProps[] => {
     const pathSegments = pathname.split("/").filter(Boolean)
-    const breadcrumbs: BreadcrumbItemProps[] = [{ label: "Home", href: "/" }]
+    const breadcrumbs: BreadcrumbItemProps[] = [{ label: t("breadcrumb.home"), href: "/" }]
 
     let currentPath = ""
     pathSegments.forEach((segment, index) => {
@@ -41,13 +43,13 @@ export function BreadcrumbNavigation({ items, className }: BreadcrumbNavigationP
 
       // Special cases for better labeling
       if (segment === "products" && index === 0) {
-        label = "Products"
+        label = t("breadcrumb.products")
       } else if (segment === "projects" && index === 0) {
-        label = "Projects"
+        label = t("breadcrumb.projects")
       } else if (segment === "about") {
-        label = "About Us"
+        label = t("breadcrumb.about")
       } else if (segment === "contact") {
-        label = "Contact"
+        label = t("breadcrumb.contact")
       }
 
       // Don't add href for the last item (current page)

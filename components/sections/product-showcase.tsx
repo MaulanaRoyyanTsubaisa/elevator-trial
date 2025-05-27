@@ -5,40 +5,42 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "@/contexts/language-context"
 
 const ProductShowcase = () => {
+  const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
 
   const products = [
     {
       id: 1,
-      name: "Premium Home Lift",
-      description: "Elegant design with premium finishes for luxury homes",
+      name: t("productShowcase.homeLift"),
+      description: t("productShowcase.homeLift.desc"),
       image: "https://images.unsplash.com/photo-1603198132637-5c4ceb5de31f?q=80&w=1200&auto=format&fit=crop",
     },
     {
       id: 2,
-      name: "Commercial Passenger Elevator",
-      description: "High-capacity elevators for office buildings and commercial spaces",
+      name: t("productShowcase.passenger"),
+      description: t("productShowcase.passenger.desc"),
       image: "https://images.unsplash.com/photo-1567610701070-6739001d5144?q=80&w=1200&auto=format&fit=crop",
     },
     {
       id: 3,
-      name: "Industrial Cargo Lift",
-      description: "Heavy-duty cargo elevators for industrial applications",
+      name: t("productShowcase.cargo"),
+      description: t("productShowcase.cargo.desc"),
       image: "https://images.unsplash.com/photo-1609942072337-c3370e820005?q=80&w=1200&auto=format&fit=crop",
     },
     {
       id: 4,
-      name: "Panoramic Glass Elevator",
-      description: "Stunning glass elevators with panoramic views",
+      name: t("productShowcase.panoramic"),
+      description: t("productShowcase.panoramic.desc"),
       image: "https://images.unsplash.com/photo-1603198132334-9cef81c66c41?q=80&w=1200&auto=format&fit=crop",
     },
     {
       id: 5,
-      name: "Hospital Medical Elevator",
-      description: "Specialized elevators for healthcare facilities",
+      name: t("productShowcase.hospital"),
+      description: t("productShowcase.hospital.desc"),
       image: "https://images.unsplash.com/photo-1504439468489-c8920d796a29?q=80&w=1200&auto=format&fit=crop",
     },
   ]
@@ -93,9 +95,9 @@ const ProductShowcase = () => {
     <section className="py-20 bg-slate-50 dark:bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Featured Products</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("productShowcase.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            Explore our premium elevator solutions designed for various applications and environments.
+            {t("productShowcase.subtitle")}
           </p>
         </div>
 

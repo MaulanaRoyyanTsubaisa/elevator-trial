@@ -6,8 +6,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { useLanguage } from "@/contexts/language-context"
 
 const ProductsList = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -105,10 +108,9 @@ const ProductsList = () => {
     <section className="py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Elevator Solutions for Every Need</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("products.list.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            From residential homes to commercial complexes, we offer a comprehensive range of elevator systems tailored
-            to your specific requirements.
+            {t("products.list.subtitle")}
           </p>
         </div>
 
@@ -135,7 +137,7 @@ const ProductsList = () => {
                     <CardDescription className="text-base text-slate-700 dark:text-slate-300 mb-6">
                       {product.description}
                     </CardDescription>
-                    <h4 className="font-semibold text-lg mb-4">Key Features:</h4>
+                    <h4 className="font-semibold text-lg mb-4">{t("common.keyFeatures")}:</h4>
                     <ul className="space-y-2 mb-6">
                       {product.features.map((feature, i) => (
                         <li key={i} className="flex items-start">
@@ -148,7 +150,7 @@ const ProductsList = () => {
                   <CardFooter className="px-0 pb-0">
                     <Button asChild>
                       <Link href="/contact">
-                        Request Information <ArrowRight className="ml-2 h-4 w-4" />
+                        {t("common.requestInfo")} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardFooter>

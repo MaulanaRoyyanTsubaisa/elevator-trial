@@ -7,8 +7,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Building, Calendar, ImageIcon, MessageSquareQuote } from "lucide-react"
 import ProjectGalleryModal, { type ProjectDetails } from "@/components/project-gallery-modal"
+import { useLanguage } from "@/contexts/language-context"
 
 const ProjectsList = () => {
+  const { t } = useLanguage()
   const [filter, setFilter] = useState("all")
   const [selectedProject, setSelectedProject] = useState<ProjectDetails | null>(null)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
@@ -733,10 +735,9 @@ const ProjectsList = () => {
     <section className="py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Our Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("projects.list.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            Browse through our portfolio of successful elevator installations across various industries and building
-            types.
+            {t("projects.list.subtitle")}
           </p>
         </div>
 
@@ -746,35 +747,35 @@ const ProjectsList = () => {
             onClick={() => setFilter("all")}
             className="min-w-[120px]"
           >
-            All ({projectCounts.all})
+            {t("projects.all")} ({projectCounts.all})
           </Button>
           <Button
             variant={filter === "commercial" ? "default" : "outline"}
             onClick={() => setFilter("commercial")}
             className="min-w-[120px]"
           >
-            Commercial ({projectCounts.commercial})
+            {t("projects.commercial")} ({projectCounts.commercial})
           </Button>
           <Button
             variant={filter === "residential" ? "default" : "outline"}
             onClick={() => setFilter("residential")}
             className="min-w-[120px]"
           >
-            Residential ({projectCounts.residential})
+            {t("projects.residential")} ({projectCounts.residential})
           </Button>
           <Button
             variant={filter === "healthcare" ? "default" : "outline"}
             onClick={() => setFilter("healthcare")}
             className="min-w-[120px]"
           >
-            Healthcare ({projectCounts.healthcare})
+            {t("projects.healthcare")} ({projectCounts.healthcare})
           </Button>
           <Button
             variant={filter === "hospitality" ? "default" : "outline"}
             onClick={() => setFilter("hospitality")}
             className="min-w-[120px]"
           >
-            Hospitality ({projectCounts.hospitality})
+            {t("projects.hospitality")} ({projectCounts.hospitality})
           </Button>
         </div>
 
@@ -804,7 +805,7 @@ const ProjectsList = () => {
                   </Badge>
                   {project.testimonial && (
                     <Badge variant="secondary" className="bg-white/90 text-slate-800 font-medium">
-                      <MessageSquareQuote className="h-3 w-3 mr-1" /> Testimonial
+                      <MessageSquareQuote className="h-3 w-3 mr-1" /> {t("common.testimonial")}
                     </Badge>
                   )}
                 </div>
@@ -829,7 +830,7 @@ const ProjectsList = () => {
                   </div>
                   <div className="flex items-center text-sm text-slate-600 dark:text-slate-400">
                     <Calendar className="h-4 w-4 mr-2" />
-                    Completed in {project.year}
+                    {t("projects.completedIn")} {project.year}
                   </div>
                 </div>
                 <CardDescription className="text-base text-slate-700 dark:text-slate-300">
@@ -838,7 +839,7 @@ const ProjectsList = () => {
               </CardContent>
               <CardFooter>
                 <Button variant="outline" className="w-full" onClick={() => openGallery(project)}>
-                  <ImageIcon className="h-4 w-4 mr-2" /> View Project Gallery
+                  <ImageIcon className="h-4 w-4 mr-2" /> {t("projects.viewGallery")}
                 </Button>
               </CardFooter>
             </Card>

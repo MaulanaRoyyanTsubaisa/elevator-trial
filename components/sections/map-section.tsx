@@ -1,8 +1,11 @@
 "use client"
 
 import { useEffect } from "react"
+import { useLanguage } from "@/contexts/language-context"
 
 const MapSection = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,9 +30,9 @@ const MapSection = () => {
     <section className="py-12 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 reveal">Our Location</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 reveal">{t("contact.map.title")}</h2>
           <p className="text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            Visit our headquarters to see our showroom and discuss your project in person.
+            {t("contact.map.subtitle")}
           </p>
         </div>
 

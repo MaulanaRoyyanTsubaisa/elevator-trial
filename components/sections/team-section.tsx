@@ -4,8 +4,11 @@ import { useEffect } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Linkedin, Twitter } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const TeamSection = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -61,10 +64,9 @@ const TeamSection = () => {
     <section className="py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Our Leadership Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("team.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            Meet the experienced professionals who drive our vision and ensure the highest standards of quality and
-            innovation.
+            {t("team.subtitle")}
           </p>
         </div>
 

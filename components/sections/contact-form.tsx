@@ -9,8 +9,10 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useLanguage } from "@/contexts/language-context"
 
 const ContactForm = () => {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -77,20 +79,20 @@ const ContactForm = () => {
   return (
     <Card className="border-none shadow-lg reveal">
       <CardHeader>
-        <CardTitle className="text-2xl">Get in Touch</CardTitle>
-        <CardDescription>Fill out the form below and our team will get back to you within 24 hours.</CardDescription>
+        <CardTitle className="text-2xl">{t("contact.form.title")}</CardTitle>
+        <CardDescription>{t("contact.form.subtitle")}</CardDescription>
       </CardHeader>
       <CardContent>
         {isSubmitted ? (
           <div className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 p-4 rounded-md mb-6">
-            Thank you for your message! Our team will contact you shortly.
+            {t("form.success")}
           </div>
         ) : null}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="name">{t("form.fullName")}</Label>
               <Input
                 id="name"
                 name="name"
@@ -101,7 +103,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
+              <Label htmlFor="email">{t("form.email")}</Label>
               <Input
                 id="email"
                 name="email"
@@ -116,7 +118,7 @@ const ContactForm = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone Number</Label>
+              <Label htmlFor="phone">{t("form.phone")}</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -127,37 +129,37 @@ const ContactForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="subject">Subject</Label>
+              <Label htmlFor="subject">{t("form.subject")}</Label>
               <Select value={formData.subject} onValueChange={handleSelectChange} required>
                 <SelectTrigger id="subject">
-                  <SelectValue placeholder="Select a subject" />
+                  <SelectValue placeholder={t("form.selectSubject")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="quote">Request a Quote</SelectItem>
-                  <SelectItem value="information">Product Information</SelectItem>
-                  <SelectItem value="support">Technical Support</SelectItem>
-                  <SelectItem value="partnership">Partnership Opportunity</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  <SelectItem value="quote">{t("form.requestQuote")}</SelectItem>
+                  <SelectItem value="information">{t("form.productInfo")}</SelectItem>
+                  <SelectItem value="support">{t("form.techSupport")}</SelectItem>
+                  <SelectItem value="partnership">{t("form.partnership")}</SelectItem>
+                  <SelectItem value="other">{t("form.other")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">{t("form.message")}</Label>
             <Textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Please provide details about your project or inquiry..."
+              placeholder={t("form.messagePlaceholder")}
               rows={5}
               required
             />
           </div>
 
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting ? t("form.sending") : t("form.send")}
           </Button>
         </form>
       </CardContent>

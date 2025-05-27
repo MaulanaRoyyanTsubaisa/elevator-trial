@@ -7,6 +7,8 @@ import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { useLanguage } from "@/contexts/language-context"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,6 +16,7 @@ const Header = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false)
   const [isProjectsOpen, setIsProjectsOpen] = useState(false)
   const pathname = usePathname()
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,9 +77,9 @@ const Header = () => {
   ]
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.about"), href: "/about" },
+    { name: t("nav.contact"), href: "/contact" },
   ]
 
   const slugify = (text: string) => {
@@ -99,7 +102,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -116,7 +119,7 @@ const Header = () => {
             {/* Products Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-slate-700 dark:text-slate-200">
-                <span>Products</span>
+                <span>{t("nav.products")}</span>
                 <ChevronDown size={16} />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
@@ -133,7 +136,7 @@ const Header = () => {
             {/* Projects Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-slate-700 dark:text-slate-200">
-                <span>Projects</span>
+                <span>{t("nav.projects")}</span>
                 <ChevronDown size={16} />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
@@ -147,19 +150,21 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+
             <Button asChild>
-              <Link href="/contact">Get a Quote</Link>
+              <Link href="/contact">{t("nav.getQuote")}</Link>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-slate-700 dark:text-slate-200"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
+            <button className="text-slate-700 dark:text-slate-200" onClick={toggleMenu} aria-label="Toggle menu">
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -196,7 +201,7 @@ const Header = () => {
                 className="flex items-center justify-between w-full text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-primary transition-colors"
                 aria-expanded={isProductsOpen}
               >
-                <span>Products</span>
+                <span>{t("nav.products")}</span>
                 {isProductsOpen ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               <div
@@ -227,7 +232,7 @@ const Header = () => {
                 className="flex items-center justify-between w-full text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-primary transition-colors"
                 aria-expanded={isProjectsOpen}
               >
-                <span>Projects</span>
+                <span>{t("nav.projects")}</span>
                 {isProjectsOpen ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
               </button>
               <div
@@ -253,7 +258,7 @@ const Header = () => {
 
             <Button asChild className="mt-4 w-fit">
               <Link href="/contact" onClick={closeMenu}>
-                Get a Quote
+                {t("nav.getQuote")}
               </Link>
             </Button>
           </nav>

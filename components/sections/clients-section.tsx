@@ -5,8 +5,11 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const ClientsSection = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,10 +36,9 @@ const ClientsSection = () => {
     <section className="py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">Trusted by Industry Leaders</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 reveal">{t("clients.title")}</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto reveal reveal-delay-1">
-            We've partnered with renowned architects, developers, and property managers to deliver exceptional elevator
-            solutions.
+            {t("clients.subtitle")}
           </p>
         </div>
 
@@ -62,7 +64,7 @@ const ClientsSection = () => {
         <div className="text-center reveal reveal-delay-3">
           <Button asChild size="lg">
             <Link href="/projects">
-              View Our Projects <ArrowRight className="ml-2 h-4 w-4" />
+              {t("clients.viewProjects")} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

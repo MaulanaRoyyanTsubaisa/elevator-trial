@@ -4,8 +4,11 @@ import { useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const CTASection = () => {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,13 +32,11 @@ const CTASection = () => {
   return (
     <section className="py-20 bg-primary text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 reveal">Ready to Elevate Your Building Experience?</h2>
-        <p className="text-lg text-slate-200 max-w-3xl mx-auto mb-8 reveal reveal-delay-1">
-          Contact our team today to discuss your elevator needs and receive a customized quote for your project.
-        </p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 reveal">{t("cta.title")}</h2>
+        <p className="text-lg text-slate-200 max-w-3xl mx-auto mb-8 reveal reveal-delay-1">{t("cta.subtitle")}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 reveal reveal-delay-2">
           <Button asChild size="lg" variant="secondary" className="min-w-[160px]">
-            <Link href="/contact">Get a Quote</Link>
+            <Link href="/contact">{t("cta.getQuote")}</Link>
           </Button>
           <Button
             asChild
@@ -44,7 +45,7 @@ const CTASection = () => {
             className="min-w-[160px] bg-transparent text-white border-white hover:bg-white/10"
           >
             <Link href="/products">
-              Explore Products <ArrowRight className="ml-2 h-4 w-4" />
+              {t("cta.exploreProducts")} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
